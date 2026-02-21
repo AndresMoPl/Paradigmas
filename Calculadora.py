@@ -53,6 +53,7 @@ while True:
             respuesta = Divicion()
             print(respuesta)
             t.sleep(0.5)
+    
             
 #Opcion de multiplicacion
         elif opcion == 4:
@@ -60,10 +61,12 @@ while True:
             print(respuesta)
             t.sleep(0.5)
             
-#Else por si se elijen numero fuera de las opciones
+        #Else por si se elijen numero fuera de las opciones
         else:
             print("Opcion no valida")
             t.sleep(0.5)
+    except ZeroDivisionError:    
+        print("You cannot divide by zero!")
     except Exception as e:
         print(e, "No es una opcion no valida")
         #Catch por si se selecciona cualquier otro digito que no sea un int    
